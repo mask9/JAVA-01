@@ -10,4 +10,6 @@ public interface OrderService {
     void deleteOrder(Order tOrder);
     
     void selectOrder(Order tOrder);
+    
+    void insertOrderTransaction(Order tOrder);
 }

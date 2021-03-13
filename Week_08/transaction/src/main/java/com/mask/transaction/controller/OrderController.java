@@ -21,6 +21,14 @@ public class OrderController {
         orderService.insertOrder(tOrder);
     }
     
+    @RequestMapping("/insert-tran")
+    public void insertTransaction(Long id,Long userId) {
+        Order tOrder = new Order();
+        tOrder.setId(id);
+        tOrder.setUserId(userId);
+        orderService.insertOrderTransaction(tOrder);
+    }
+    
     @RequestMapping("/updata")
     public void updata(Long id,Long userId) {
         Order tOrder = new Order();
