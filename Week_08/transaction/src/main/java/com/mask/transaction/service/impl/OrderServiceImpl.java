@@ -7,7 +7,6 @@ import org.apache.shardingsphere.transaction.annotation.ShardingTransactionType;
 import org.apache.shardingsphere.transaction.core.TransactionType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -35,7 +34,6 @@ public class OrderServiceImpl implements OrderService {
     }
     
     @Override
-    @Transactional
     @ShardingTransactionType(TransactionType.XA)
     public void insertOrderTransaction(Order tOrder){
         orderMapper.insert(tOrder);
